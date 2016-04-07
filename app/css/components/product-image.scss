@@ -4,6 +4,7 @@ $thumb-width : 60px;
   @include box;
   background-color: $product-image-bg;
   position: relative;
+  text-align: center;
   padding-right: $padding-large-horizontal + $thumb-width + $padding-large-horizontal + 15;
 
   .product-image-selected{
