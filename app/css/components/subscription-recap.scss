@@ -1,0 +1,8 @@
+.subscription-recap{
+  @include box;
+  background-color: $subscription-recap-bg;
+
+  .subscription-recap-title{
+    margin-top: 0;
+  }
+}

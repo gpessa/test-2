@@ -1,0 +1,13 @@
+.subscription-selector{
+
+  .subscription-selector-title{
+    margin-top: 0; 
+  }
+
+  .phone-price{
+    position: absolute;
+    right: $grid-gutter-width / 2;
+    margin-top: -100px;
+  }
+
+}

@@ -1,0 +1,20 @@
+<section class="subscription-selector">
+  <div class="row">
+
+    <div class="col-md-16 subscription-selector-list">
+      <h2 class="subscription-selector-title">{{product.name}}</h2>
+
+      <subscriptions-list ng-model="selected"
+                          subscriptions="product.subscriptions"
+                          product="product"></subscriptions-list>
+    </div>
+
+    <div class="col-md-8 subscription-selector-recap">
+      <product-image images="product.images"></product-image>
+      <phone-price subscription="selected" product="product"></phone-price>
+      <subscription-buy subscription="selected" product="product"></subscription-buy>
+      <subscription-recap subscription="selected" product="product"></subscription-recap>
+    </div>
+
+  </div>
+<section>

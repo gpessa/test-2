@@ -1,0 +1,26 @@
+<section class="subscription-recap" ng-show="subscription">
+
+  <h4>Monthly Cost</h4>
+
+  <div class="row small">
+    <div class="col-sm-18 text-left"><strong>Zorgeloos Standaard</strong></div>
+    <div class="col-sm-6 text-right"><strong>{{subscription.price | currency: '€ '}}</strong></div>
+  </div>
+
+  <div class="row small">
+    <div class="col-sm-18 text-left text-normal">Discount as long as your subscriptions runs</div>
+    <div class="col-sm-6 text-right text-secondary">- {{subscription.discount | currency: '€ '}}</div>
+  </div>
+
+  <h4>One-off</h4>
+
+  <div class="row small">
+    <div class="col-sm-18 text-left text-normal"><strong>{{product.name}}</strong></div>
+    <div class="col-sm-6 text-right text-secondary">{{product.price - subscription.discountdevice | currency: '€ '}}</div>
+  </div>
+
+  <div class="row small">
+    <div class="col-sm-24 text-left text-normal">original {{product.price| currency: '€ '}}</div>
+  </div>
+
+<section>

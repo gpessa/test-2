@@ -1,0 +1,15 @@
+<aside class="subscription-buy" ng-show="subscription">
+
+  <div class="h4 row">
+    <div class="col-sm-14 text-left">Total per month</div>
+    <div class="col-sm-10 text-right">{{(subscription.price - subscription.discount) | currency: '€ '}}</div>
+  </div>
+
+  <div class="h4 row">
+    <div class="col-sm-14 text-left text-normal">Totale one-off</div>
+    <div class="col-sm-10 text-right">{{product.price | currency: '€ '}}</div>
+  </div>
+
+  <button class="btn btn-primary btn-block">Bestellen</button>
+
+</aside>

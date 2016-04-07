@@ -1,0 +1,26 @@
+.phone-price{
+  background: $btn-primary-bg;
+  color: $btn-primary-color;
+  display: inline-block;
+  padding: $padding-small-vertical $padding-small-horizontal;
+  position: relative;
+
+  .phone-price-total{
+    font-size: $font-size-h3;
+  }
+
+
+  &:after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 31px solid transparent;
+    border-bottom: 31px solid transparent;
+    border-right: 15px solid $btn-primary-bg;
+    z-index: 1000;
+    left: -15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

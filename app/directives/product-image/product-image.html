@@ -1,0 +1,13 @@
+<aside class="product-image">
+
+  <img class="product-image-selected" ng-src="/assets/images/{{images[selected]}}" />
+
+  <ul class="nav product-image-thumbs">
+    <li ng-repeat="image in images" ng-class="{'active' : $index == selected}">
+      <a ng-click="select($index)">
+        <img ng-src="/assets/images/{{images[$index]}}"/>
+      </a>
+    </li>
+  </ul>
+
+</aside>

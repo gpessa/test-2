@@ -1,0 +1,45 @@
+<section class="subscription-list">
+
+  <p class="h4 intro">Select subscription</p>
+
+  <div class="subscription-list-item row hidden-xs">
+    <div class="col-sm-8 small col-name">Name</div>
+    <div class="col-sm-5 small col-traffic">Minutes/sms</div>
+    <div class="col-sm-3 small col-internet">Internet</div>
+    <div class="col-sm-3 small col-price">Device price</div>
+    <div class="col-sm-5 small col-monthly-price">Cost / month</div>
+  </div>
+  <div ng-repeat="subscription in subscriptions" class="subscription-list-item row">
+    <label class="clearfix">
+
+      <div class="col-sm-8 col-name">
+        <span class="visible-xs">Name</span>
+        <input type="radio" ng-model="$parent.selected" ng-value="subscription" ng-change="change()">
+        <strong>{{subscription.name}}</strong>
+      </div>
+
+      <div class="col-sm-5 col-traffic">
+        <span class="visible-xs">Minutes/sms</span>
+        {{subscription.volume}}
+      </div>
+
+      <div class="col-sm-3 col-internet">
+        <span class="visible-xs">Internet</span>
+        {{subscription.data | megabytes}}
+      </div>
+
+      <div class="col-sm-3 col-price">
+        <span class="visible-xs">Device price</span>
+        <strong>{{(product.price - subscription.discountdevice) | currency: '€ '}}</strong>
+      </div>
+
+      <div class="col-sm-5 col-monthly-price">
+        <span class="visible-xs">Cost / month</span>
+        <s>{{subscription.price | currency: '€ '}}</s>
+        <span class="text-secondary">{{(subscription.price - subscription.discount) | currency: '€ '}}</span>
+      </div>
+
+    </label>
+  </div>
+
+<section>
