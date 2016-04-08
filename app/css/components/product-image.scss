@@ -8,7 +8,11 @@ $thumb-width : 60px;
   padding-right: $padding-large-horizontal + $thumb-width + $padding-large-horizontal + 15;
 
   .product-image-selected{
-    max-width: 100%;
+    max-width: 70%;
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 100%;
+    }
   }
 
   .product-image-thumbs{

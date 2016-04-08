@@ -1,9 +1,5 @@
 export default ngModule => {
 
-  if (ON_TEST) {
-    require('./subscription-selector.test').default(ngModule);
-  }
-
   ngModule.directive('subscriptionSelector', /*@ngInject*/ (Products) => {
     return {
       restrict: 'E',

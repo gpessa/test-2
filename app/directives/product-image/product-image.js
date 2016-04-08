@@ -1,9 +1,5 @@
 export default ngModule => {
 
-  if (ON_TEST) {
-    require('./product-image.test').default(ngModule);
-  }
-
   ngModule.directive('productImage', /*@ngInject*/ () => {
     return {
       restrict: 'E',
